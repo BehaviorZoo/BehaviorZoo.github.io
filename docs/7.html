@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DeepPoseKit, a software toolkit for fast and robust animal pose estimation using deep learning</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="森" />
+    <meta name="description" content="DeepPoseKit, a software toolkit for fast and robust animal pose estimation using deep learning ID 7 URL https://elifesciences.org/articles/47994/figures animal Drosophila species Drosophila melanogaster status nan Journal Elife Author Jacob M Graving , Daniel Chae, Hemal Naik, Liang Li, Benjamin Koger, Blair R Costelloe, Iain D Couzin …" />
+    <meta name="keywords" content="Elife">
+<!-- Facebook and Twitter integration -->
+<meta property="og:site_name" content="BehaviorZoo"/>
+<meta property="og:title" content="DeepPoseKit, a software toolkit for fast and robust animal pose estimation using deep learning"/>
+<meta property="og:description" content="DeepPoseKit, a software toolkit for fast and robust animal pose estimation using deep learning ID 7 URL https://elifesciences.org/articles/47994/figures animal Drosophila species Drosophila melanogaster status nan Journal Elife Author Jacob M Graving , Daniel Chae, Hemal Naik, Liang Li, Benjamin Koger, Blair R Costelloe, Iain D Couzin …"/>
+<meta property="og:url" content="https://BehaviorZoo.github.io/7.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2019-10-01 00:00:00+09:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://BehaviorZoo.github.io/author/sen.html">
+<meta property="article:section" content="Drosophila"/>
+    <meta property="article:tag" content="Elife"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://BehaviorZoo.github.io/theme/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="https://BehaviorZoo.github.io/theme/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="https://BehaviorZoo.github.io/theme/css/bootstrap.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="https://BehaviorZoo.github.io/theme/css/flexslider.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="https://BehaviorZoo.github.io/theme/css/style.css">
+    <!-- Custom style  -->
+    <link rel="stylesheet" href="https://BehaviorZoo.github.io/theme/css/custom.css">
+    <!-- pygments code highlight -->
+    <link rel="stylesheet" href="https://BehaviorZoo.github.io/theme/css/pygments.css">
+    <!-- tipue search -->
+    <link rel="stylesheet" href="https://BehaviorZoo.github.io/theme/tipuesearch/css/tipuesearch.css">
+
+    <!-- Modernizr JS -->
+    <script src="https://BehaviorZoo.github.io/theme/js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="/theme/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+    </head>
+    <body>
+    <div id="fh5co-page">
+        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+        <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+
+            <nav class="fh5co-main-menu" role="navigation">
+            </nav>
+            <div class="clearfix"></div>
+            <h1  id="fh5co-logo">
+                <a href="https://BehaviorZoo.github.io/index.html">
+                    <img src="" />
+                </a>
+            </h1>
+            <nav class="fh5co-main-menu" role="navigation">
+<ul>
+    <!-- home link -->
+    <li><a href="https://BehaviorZoo.github.io/">Home</a></li>
+
+    <!-- page links -->
+
+    <!-- categories -->
+        <li class="nav-title">Categories</li>
+            <li><a href="https://BehaviorZoo.github.io/category/ant.html">ant</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/bee.html">bee</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/bird.html">bird</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/caenorhabditis-elegans.html">Caenorhabditis elegans</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/cheetahs.html">Cheetahs</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/dog.html">dog</a></li>
+            <li class="fh5co-active"><a href="https://BehaviorZoo.github.io/category/drosophila.html">Drosophila</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/grevys-zebra.html">Grévy’s zebra</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/hourse.html">Hourse</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/human.html">human</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/larvae.html">larvae</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/locust.html">locust</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/macaque.html">Macaque</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/marmoset.html">marmoset</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/mice.html">mice</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/monkey.html">monkey</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/mosquito.html">Mosquito</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/others.html">others</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/pig.html">pig</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/rhesus-monkey.html">rhesus monkey</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/weakly-electric-fish.html">weakly electric fish</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/zebra-fish.html">zebra fish</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/zebrafish.html">zebrafish</a></li>
+
+    <!-- tags -->
+        <li><a href="https://BehaviorZoo.github.io/tags.html">Tags</a></li>
+
+    <!-- additional menu items from config -->
+
+</ul><ul><li><form id="searchform" action="https://BehaviorZoo.github.io/search.html">
+    <input id="tipue_search_input" data-siteurl="https://BehaviorZoo.github.io" type="text" size="60" class="form-control search-field" name="q">
+
+    <button type="submit" class="btn btn-primary search-submit"><i class="icon-search4"></i></button>
+</form></li></ul>
+            </nav>
+
+<ul id="social">
+            <li><a href="https://twitter.com/cabernet_rock" alt="twitter"><i class="icon-twitter2"></i></a></li>
+
+            <li><a href="https://github.com/iwasakishuto" alt="github"><i class="icon-github"></i></a></li>
+
+            <li><a href="https://www.facebook.com/iwasakishuto" alt="facebook"><i class="icon-facebook2"></i></a></li>
+
+</ul>
+        </aside>
+
+        <div id="fh5co-main">
+
+    <div class="fh5co-narrow-content article-content">
+        <h1 class="fh5co-heading-colored">DeepPoseKit, a software toolkit for fast and robust animal pose estimation using deep learning</h1>
+
+        <div>by
+                <a href="author/sen.html">森</a> - Tue, 01 Oct 2019
+        </div>
+
+            <div><span>Tags: </span>
+                    <span><a href="https://BehaviorZoo.github.io/tag/elife.html">#Elife</a> </span>
+            </div>
+
+        <div class="animate-box" data-animate-effect="fadeInLeft">
+            <p class="animate-box" data-animate-effect="fadeInLeft"><h1>DeepPoseKit, a software toolkit for fast and robust animal pose estimation using deep learning</h1>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">ID</td>
+<td align="left">7</td>
+</tr>
+<tr>
+<td align="center">URL</td>
+<td align="left">https://elifesciences.org/articles/47994/figures</td>
+</tr>
+<tr>
+<td align="center">animal</td>
+<td align="left">Drosophila</td>
+</tr>
+<tr>
+<td align="center">species</td>
+<td align="left">Drosophila melanogaster</td>
+</tr>
+<tr>
+<td align="center">status</td>
+<td align="left">nan</td>
+</tr>
+<tr>
+<td align="center">Journal</td>
+<td align="left">Elife</td>
+</tr>
+<tr>
+<td align="center">Author</td>
+<td align="left">Jacob M Graving , Daniel Chae, Hemal Naik, Liang Li, Benjamin Koger, Blair R Costelloe, Iain D Couzin Is a corresponding author</td>
+</tr>
+<tr>
+<td align="center">vol_num_page</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">DOI</td>
+<td align="left">10.7554/eLife.47994</td>
+</tr>
+<tr>
+<td align="center">dataset_type</td>
+<td align="left">body shape/skelton</td>
+</tr>
+<tr>
+<td align="center">dataset_url</td>
+<td align="left">https://github.com/jgraving/DeepPoseKit-Data/tree/master/datasets</td>
+</tr>
+<tr>
+<td align="center">code</td>
+<td align="left">nan</td>
+</tr>
+<tr>
+<td align="center">size</td>
+<td align="left">nan</td>
+</tr>
+<tr>
+<td align="center">quality</td>
+<td align="left">nan</td>
+</tr>
+<tr>
+<td align="center">field_lab</td>
+<td align="left">nan</td>
+</tr>
+<tr>
+<td align="center">dimension</td>
+<td align="left">nan</td>
+</tr>
+<tr>
+<td align="center">Tracking_method</td>
+<td align="left">nan</td>
+</tr>
+<tr>
+<td align="center">notes</td>
+<td align="left">nan</td>
+</tr>
+</tbody>
+</table></p>
+        </div>
+    </div>
+
+<div class="fh5co-narrow-content">
+<div class="animate-box" data-animate-effect="fadeInLeft">
+    <h2><!-- <i class="icon-speech-bubble"></i>  -->Comments</h2>
+</div>
+<div class="animate-box" data-animate-effect="fadeInLeft">
+    <div id="disqus_thread"></div>
+</div>
+
+<script>
+var disqus_config = function () { 
+  this.language = "en";
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript><a href="https://disqus.com/?ref_noscript">Please enable JavaScript to view the comments powered by Disqus.</a></noscript>
+<div class="fh5co-footer">
+    <p><small>&copy; 2016 Blend Free HTML5. All Rights Reserved.</span> <span>Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a></span>
+    <br /><span>Pelican Theme by: <a href="https://github.com/claudio-walser/pelican-fh5co-marble" target="_blank">Claudio Walser</a></span></small></p>
+
+</div>                
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://BehaviorZoo.github.io/theme/js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="https://BehaviorZoo.github.io/theme/js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://BehaviorZoo.github.io/theme/js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="https://BehaviorZoo.github.io/theme/js/jquery.waypoints.min.js"></script>
+    <!-- Flexslider -->
+    <script src="https://BehaviorZoo.github.io/theme/js/jquery.flexslider-min.js"></script>
+
+
+    <!-- MAIN JS -->
+    <script src="https://BehaviorZoo.github.io/theme/js/main.js"></script>
+    </body>
+</html>
