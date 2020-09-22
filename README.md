@@ -2,15 +2,14 @@
 
 Collect animal behavior data, normalize and publish.
 
-## Setup
+## Set up
+
+1. Clone [pelican-plugins](https://github.com/getpelican/pelican-plugins) and set it at `pelican/pelican-plugins`.
+2. Select a [pelican-themes](http://www.pelicanthemes.com/) and set it at `pelican/pelican-themes`. (Current themes: [pelican-fh5co-marble](https://github.com/claudio-walser/pelican-fh5co-marble))
+3. Run the following commands:
 
 ```sh
-$ git clone --recursive https://github.com/getpelican/pelican-plugins
+$ pip install -r requirements.txt
+$ chmod +x mkdocs.sh
+$ ./mkdocs.sh
 ```
-
-### Links
-- [Meeting minutes](https://docs.google.com/document/d/1lj-TYqB5MDqBeoXpGLkvfykh8DfJFVGr5giKTgv2U5Y/edit#heading=h.u3m0pzchzqqc)
-- [Document](https://docs.google.com/document/d/1unvYWp736V9AdlQHts4qBEGQjtTqXnmlMT2Rmu1w00A/edit)
-- [Datasets](https://docs.google.com/spreadsheets/d/1bbiBSN2G5uu_dyKHhBYbY7PH_EVGWmT28bIGh9wXftI/edit?usp=sharing)
-- [Google Drive Folder](https://drive.google.com/drive/folders/1IoogWwMW2K5wBANGYRgLdPGM_iNgW7Wg?usp=sharing)
-
