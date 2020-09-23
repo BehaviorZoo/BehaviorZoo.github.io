@@ -1,0 +1,8 @@
+.blog-entry {
+  background: rgba(112,48,160, 0.3);
+}
+body {
+  font-family: "Times New Roman", "Roboto", Arial, sans-serif;
+  color: black;
+  background: #faf0ff;
+}

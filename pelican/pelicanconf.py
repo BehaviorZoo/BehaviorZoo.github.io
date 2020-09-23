@@ -2,47 +2,64 @@
 from __future__ import unicode_literals
 from functools import partial
 
+
+# ===================== #
+# ENVIRONMENT VARIABLES #
+# ===================== #
 AUTHOR   = "Shuto"
 SITENAME = "BehaviorZoo"
-SITEURL  = "https://BehaviorZoo.github.io/"
-# SITEURL = "http://127.0.0.1:8000"
+SITEURL  = "https://BehaviorZoo.github.io"
 SITE_LICENSE = "MIT"
-# GOOGLE_ANALYTICS = "UA-XXXXXXXXX-X"
-# Path to content directory to be processed by Pelican.
-PATH = "."
-THEME = "pelican-themes/pelican-fh5co-marble"
 TIMEZONE = "Asia/Tokyo"
 DEFAULT_LANG = "en"
 DATE_FORMATS = {
     "en": "%a, %d %b %Y",
     "ja": "%Y-%m-%d(%a)",
 }
-
+THEME = "pelican-themes/pelican-fh5co-marble"
+# GOOGLE_ANALYTICS = "UA-XXXXXXXXX-X"
+DEFAULT_PAGINATION = 10
 # Specify pages
 DIRECT_TEMPLATES = [
     "index", "tags", "categories", "authors", "archives", "search", 
     # "404", "top"
 ]
-
-# Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None
-
-# tell pelican where your custom.css file is in your content folder
-STATIC_PATHS = ["static"]
-# tell pelican where it should copy that file to in your output folder
-EXTRA_PATH_METADATA = {
-    "static/custom.css": {"path": "theme/css/custom.css"}
+# Sort tags by the number of atricles. (Descending Order)
+JINJA_FILTERS = {
+    "sort_by_article_count": partial(sorted,
+        key = lambda tags: -len(tags[1])) # tags = (tag, articles)
 }
-# tell the pelican-bootstrap-3 theme where to find the custom.css file in your output folder
-CUSTOM_CSS = "theme/css/custom.css"
 
-# PLUGINS
+
+# ======== #
+#   PATH   #
+# ======== #
+# Path to content directory to be processed by Pelican.
+PATH = "." 
+# A list of directories (relative to PATH) in which to look for static files. 
+# Such files will be copied to the output directory without modification.
+STATIC_PATHS = ["_static"]
+EXTRA_PATH_METADATA = {
+    "_static/behaviorzoo.css": {"path": "theme/css/behaviorzoo.css"}
+}
+
+# =============== #
+# FEED GENERATION #
+# =============== #
+FEED_ALL_ATOM         = None
+CATEGORY_FEED_ATOM    = None
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM      = None
+AUTHOR_FEED_RSS       = None
+
+
+# =========== #
+#   PLUGINS   #
+# =========== #
 PLUGIN_PATHS = ["./pelican-plugins"]
-PLUGINS = ["i18n_subsites", "render_math", "tipue_search", "encrypt_content", "neighbors"] # "cover-image"]
+PLUGINS = [
+    "i18n_subsites", "render_math", "tipue_search", "neighbors"
+]
 # jupyter notebook
 MARKUP = ("md", "ipynb")
 IGNORE_FILES = [".ipynb_checkpoints", ".DS_Store"]
@@ -53,33 +70,12 @@ JINJA_ENVIRONMENT = {
     "extensions": ["jinja2.ext.i18n"],
 }
 
-# Encrypt Pelican Content
-ENCRYPT_CONTENT = {
-    "title_prefix": '<i class="fas fa-lock"></i>',
-    "summary": "This content is encrypted."
-}
 
-# COVER_IMAGE
-# COVER_IMAGES_PATH = "theme/cover_images"
-# DEFAULT_COVER_IMAGE = "default_image.png"
-
-# Blogroll
-# LINKS = (("Home",       "https://iwasakishuto.github.io"),
-#          ("Blog",       "https://iwasakishuto.github.io/blog/articles/index.html"),
-#          ("University", "https://iwasakishuto.github.io/University/index.html"),
-#          ("Kerasy",     "https://iwasakishuto.github.io/Kerasy/doc/index.html"),
-#          ("Front-End",  "https://iwasakishuto.github.io/Front-End/index.html"))
-# Social widget
-SOCIAL = (("twitter",  "https://twitter.com/cabernet_rock"),
-          ("github",   "https://github.com/iwasakishuto"),
-          ("facebook", "https://www.facebook.com/iwasakishuto"))
-
-DEFAULT_PAGINATION = 10
+# ================= #
+#   Social Widget   #
+# ================= #
 TWITTER_USERNAME = "cabernet_rock"
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
-
-JINJA_FILTERS = {
-    "sort_by_article_count": partial(sorted,
-        key = lambda tags: -len(tags[1])) # tags = (tag, articles)
-}
+SOCIAL = (
+    ("twitter",  "https://twitter.com/cabernet_rock"),
+    ("github",   "https://github.com/BehaviorZoo")
+)

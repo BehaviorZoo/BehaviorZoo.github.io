@@ -41,5 +41,8 @@ logging "cd ../$PELICAN_DIRNAME"
 cd ../$PELICAN_DIRNAME	
 whereIam	
 
+logging "cp -r _static/ content/_static"	
+cp -r _static/ content/_static
+
 logging "make html"	
 make html
