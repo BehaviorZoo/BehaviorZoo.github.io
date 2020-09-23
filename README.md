@@ -1,6 +1,7 @@
 # BehaviorZoo
+![header](https://github.com/BehaviorZoo/BehaviorZoo.github.io/blob/master/image/header.png?raw=true)
 
-Collect animal behavior data, normalize and publish.
+A Collect of animal behavior data.
 
 ## Set up
 
