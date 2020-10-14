@@ -8,13 +8,13 @@ body {
 }
 
 /* Thumbnails */
-.slide {
+div#contents div.slide {
   position: relative;
   width: 100%;
   height: 500px;
   overflow: hidden;
 }
-.slide img {
+div#contents div.slide img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -23,18 +23,21 @@ body {
   height: auto;
   opacity: 0;
 }
-.thumbnail {
+div#contents div.thumbnail {
   list-style: none;
   display: flex;
   padding: 0;
   margin-top: 30px;
   justify-content: center;
 }
-.thumbnail img {
+div#contents div.thumbnail img {
   display: block;
   width: 200px;
   height: 100px;
   object-fit: cover;
   margin: 10px;
   cursor: pointer;
+}
+div#contents input[type="radio"] {
+  display: none;
 }

@@ -7,7 +7,7 @@ AUTHOR   = "Shuto"
 SITENAME = "BehaviorZoo"
 SITEURL  = "https://BehaviorZoo.github.io"
 SITE_LICENSE = "MIT"
-# GOOGLE_ANALYTICS = "UA-XXXXXXXXX-X"
+GOOGLE_ANALYTICS = "UA-180584889-1"
 THEME = "pelican-fh5co-marble-modified"
 TIMEZONE = "Asia/Tokyo"
 DEFAULT_LANG = "en"
@@ -19,15 +19,16 @@ PATH = "."
 STATIC_PATHS = ["theme", "thumbnails"]
 EXTRA_PATH_METADATA = {
     "theme/behaviorzoo.css" : {"path": "theme/css/behaviorzoo.css"},
+    "theme/behaviorzoo.js"  : {"path": "theme/js/behaviorzoo.js"},
     "theme/images"          : {"path": "theme/images"},
 }
 LOGO             = urljoin(base=SITEURL, url="theme/images/logo-round.png")
 APPLE_TOUCH_ICON = urljoin(base=SITEURL, url="theme/images/apple-touch-icon.png")
-THUMBNAILS_URL   = urljoin(base=SITEURL, url="thumbnails")
+IMAGE_NOT_FOUND  = urljoin(base=SITEURL, url="theme/images/image-not-found.png")
 USE_FOLDER_AS_CATEGORY = True
 # Specify pages
 DIRECT_TEMPLATES = [
-    "index", "tags", "categories", "archives", "search", "404", 
+    "index", "tags", "categories", "archives", "search", "404", "contact",
 ]
 DEFAULT_PAGINATION = 10
 DISQUS_ON_PAGES = False
@@ -70,6 +71,5 @@ SOCIAL = (
 TWITTER_USERNAME = "cabernet_rock"
 # Sort tags by the number of atricles. (Descending Order)
 JINJA_FILTERS = {
-    "sort_by_article_count": partial(sorted,
-        key = lambda tags: -len(tags[1])) # tags = (tag, articles)
+    "sort_by_article_count": partial(sorted, key=lambda tags: -len(tags[1])) # tags = (tag, articles)
 }
