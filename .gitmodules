@@ -1,0 +1,7 @@
+[submodule "pelican/pelican-fh5co-marble"]
+	path = pelican/pelican-fh5co-marble
+	url = https://github.com/claudio-walser/pelican-fh5co-marble.git
+[submodule "pelican/pelican-plugins"]
+	path = pelican/pelican-plugins
+	url = https://github.com/getpelican/pelican-plugins.git
+

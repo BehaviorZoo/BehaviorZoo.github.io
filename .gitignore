@@ -2,17 +2,18 @@ __pycache__
 .ipynb_checkpoints
 .DS_Store
 *.ipynb
-
-# Icon
 Icon?
 !image/icon
 
-# docs
+# How to generate this docs
+# Source of docs
 src/*.xlsx
 src/*.csv
+# Generate markdown pages from source files (*.xlsx, *.csv)
+src/generate_pages.py
+src/templates/*
+# Generated 'content' (markdown pages) for pelican
+pelican/content/*
 
 # Pelican
-pelican/pelican-plugins/*
-!pelican/pelican-plugins/README.md
-pelican/pelican-themes/*
-!pelican/pelican-themes/README.md
+pelican/*-modified
