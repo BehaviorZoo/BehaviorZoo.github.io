@@ -16,16 +16,14 @@ DATE_FORMATS = {
     "ja": "%Y-%m-%d(%a)",
 }
 PATH = "."
-STATIC_PATHS = ["static"]
-THUMBNAILS_DIR = "theme/thumbnails"
+STATIC_PATHS = ["theme", "thumbnails"]
 EXTRA_PATH_METADATA = {
-    "static/behaviorzoo.css" : {"path": "theme/css/behaviorzoo.css"},
-    "static/images"          : {"path": "theme/images"},
-    "static/thumbnails"      : {"path": THUMBNAILS_DIR},
+    "theme/behaviorzoo.css" : {"path": "theme/css/behaviorzoo.css"},
+    "theme/images"          : {"path": "theme/images"},
 }
 LOGO             = urljoin(base=SITEURL, url="theme/images/logo-round.png")
 APPLE_TOUCH_ICON = urljoin(base=SITEURL, url="theme/images/apple-touch-icon.png")
-THUMBNAILS_URL   = urljoin(base=SITEURL, url=THUMBNAILS_DIR)
+THUMBNAILS_URL   = urljoin(base=SITEURL, url="thumbnails")
 USE_FOLDER_AS_CATEGORY = True
 # Specify pages
 DIRECT_TEMPLATES = [

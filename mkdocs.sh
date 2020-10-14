@@ -5,11 +5,14 @@
 function logging() { 
   echo -e "\033[0;32m$1\033[0m"
 }
-function warnings() {	
-  echo -e "\033[31m$1\033[0m"
-}
 function whereIam() {	
   echo -e "@ \033[07m`pwd`\033[0m"
+}
+function deleteDir(){
+  if [ -d $1 ]; then
+    echo -e "Deleted old \033[31m$1\033[0m directory."
+    rm -rf $1	
+  fi
 }
 
 HERE=$(cd $(dirname $0);pwd)	
@@ -22,7 +25,6 @@ SRC_DATA_PATH="${SRC_DIRNAME}/BehaviorZoo.xlsx"
 PELICAN_DIRNAME="pelican"
 PELICAN_CONF_PATH="${PELICAN_DIRNAME}/pelicanconf.py"
 PELICAN_SRC_DIRNAME="${PELICAN_DIRNAME}/content"
-PELICAN_STATIC_DIRNAME="${PELICAN_DIRNAME}/static!important"
 # Docs.
 DOC_DIRNAME="docs"
 
@@ -31,18 +33,16 @@ cd $HERE
 whereIam
 
 # Delete old Docs.
-if [ -d $DOC_DIRNAME ]; then	
-  warnings "Delete old $DOC_DIRNAME directory."	
-  rm -rf $DOC_DIRNAME	
-fi
+deleteDir $DOC_DIRNAME	
+deleteDir $PELICAN_SRC_DIRNAME
 
 # Generate markdown pages from file at ${SRC_DATA_PATH} and save them to ${PELICAN_SRC_DIRNAME} directory.
 logging "${PYTHON} ${PAGE_GENERATION_PROGRAM} -D ${SRC_DATA_PATH} -O ${PELICAN_SRC_DIRNAME}"	
 $PYTHON $PAGE_GENERATION_PROGRAM -D $SRC_DATA_PATH -O $PELICAN_SRC_DIRNAME
 
 # Copy static directory for pelican.
-logging "cp -r ${PELICAN_STATIC_DIRNAME} ${PELICAN_SRC_DIRNAME}/static"
-cp -r $PELICAN_STATIC_DIRNAME $PELICAN_SRC_DIRNAME/static
+logging "cp -r ${PELICAN_DIRNAME}/static!important/* ${PELICAN_SRC_DIRNAME}/"
+cp -r $PELICAN_DIRNAME/static!important/* $PELICAN_SRC_DIRNAME/
 
 # Generate docs using pelican.
 logging "pelican ${PELICAN_SRC_DIRNAME} -o ${DOC_DIRNAME} -s ${PELICAN_CONF_PATH}"	
