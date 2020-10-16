@@ -7,7 +7,7 @@ AUTHOR   = "Shuto"
 SITENAME = "BehaviorZoo"
 SITEURL  = "https://BehaviorZoo.github.io"
 SITE_LICENSE = "MIT"
-GOOGLE_ANALYTICS = "UA-180584889-1"
+GOOGLE_TRACKING_ID = "UA-180584889-1"
 THEME = "pelican-fh5co-marble-modified"
 TIMEZONE = "Asia/Tokyo"
 DEFAULT_LANG = "en"
@@ -56,13 +56,22 @@ MARKDOWN = {
 from pelican_jupyter import markup as nb_markup
 PLUGIN_PATHS = ["./pelican-plugins-modified"]
 PLUGINS = ["i18n_subsites", nb_markup, "render_math", "tipue_search", "neighbors"]
+# i18n_subsites
+JINJA_ENVIRONMENT = {"extensions": ["jinja2.ext.i18n"]}
+# I18N_SUBSITES = {
+#     'de': {
+#         'SITENAME': 'Testseite',
+#         'AUTHOR': 'Der Tester',
+#         'LOCALE': 'de_DE.UTF-8',
+#     },
+#     'fr': {}
+# }
+
 # jupyter notebook
 MARKUP = ("md", "ipynb")
 IGNORE_FILES = [".ipynb_checkpoints", ".DS_Store"]
 IPYNB_SKIP_CSS = True   # Do not use Ipython CSS.
 IPYNB_IGNORE_CSS = True # Suppress the inclusion of CSS entirely
-# i18n_subsites
-JINJA_ENVIRONMENT = {"extensions": ["jinja2.ext.i18n"]}
 # Social Widget
 SOCIAL = (
     ("twitter",  "https://twitter.com/cabernet_rock"),
