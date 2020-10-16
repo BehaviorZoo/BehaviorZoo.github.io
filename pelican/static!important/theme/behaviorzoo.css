@@ -1,11 +1,41 @@
+/*!
+ * Custom CSS for https://iwasakishuto.github.io/Translation-Gummy
+ *
+ * Copyright 2020 Shuto Iwasaki
+ * Twitter : https://twitter.com/cabernet_rock
+ * Github  : https://github.com/iwasakishuto
+ * 
+ */
+
+ @font-face {
+  font-family: 'gabriola';
+  src:  url('../fonts/gabriola/Gabriola.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: "Times New Roman", "Roboto", Arial, sans-serif;
+  font-family: "gabriola", "Times New Roman", "Roboto", Arial, sans-serif;
   color: black;
   background: #faf0ff;
 }
 /* index.html */
 div.blog-entry {
   background: rgba(112,48,160, 0.3);
+  height: 500px;
+  border-radius: 10px;
+}
+div.blog-entry div.desc {
+  overflow: auto;
+  height: 85%;
+  background: rgba(255,255,255, 0.3);
+  border-radius: 10px;
+}
+div.blog-entry div.readmore {
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 
 /* article.html */
@@ -112,4 +142,10 @@ div#contents ul.thumbnail img {
 }
 div#contents input[type="radio"] {
   display: none;
+}
+
+aside#fh5co-aside {
+  font-family: 'gabriola';
+  background-color: rebeccapurple;
+  color: white;
 }

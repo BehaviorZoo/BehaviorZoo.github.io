@@ -82,6 +82,8 @@ figure figcaption {
 }
 
 #fh5co-aside {
+  columns: white;
+  background-color: rebeccapurple;
   padding-top: 60px;
   padding-bottom: 40px;
   width: 20%;
@@ -101,7 +103,7 @@ figure figcaption {
 
 @media screen and (max-width: 1200px) {
   #fh5co-aside {
-    width: 30%;
+    width: 25%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1004,7 +1006,8 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   box-shadow: none;
   background: transparent;
   border: 2px solid rgba(0, 0, 0, 0.1);
-  height: 54px;
+  height: 40px;
+  padding: 10px;
   font-size: 18px;
   font-weight: 300;
   -webkit-border-radius: 7px;
