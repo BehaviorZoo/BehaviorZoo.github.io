@@ -201,6 +201,8 @@
     <script src="https://BehaviorZoo.github.io/theme/js/bootstrap.min.js"></script>
     <script src="https://BehaviorZoo.github.io/theme/js/jquery.waypoints.min.js"></script>
     <script src="https://BehaviorZoo.github.io/theme/js/jquery.flexslider-min.js"></script>
+    <script src="https://BehaviorZoo.github.io/theme/js/jquery.scrollTo-min.js"></script>
+    <script src="https://BehaviorZoo.github.io/theme/js/jquery.smoothDivScroll-0.6.js"></script>
     <script src="https://BehaviorZoo.github.io/theme/js/BehaviorZoo.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180584889-1"></script>
@@ -212,5 +214,10 @@
       gtag('config', 'UA-180584889-1');
     </script>
     <script src="https://BehaviorZoo.github.io/theme/js/main.js"></script>
+    <script>
+      $(function() {
+	      $("#sampleImages").smoothDivScroll({mouseDownSpeedBooster: 2});
+      });
+    </script>
   </body>
 </html>

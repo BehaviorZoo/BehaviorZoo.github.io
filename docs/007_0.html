@@ -146,10 +146,18 @@
                       <img src="https://BehaviorZoo.github.io/thumbnails/007/elife-47994-fig4-v2.jpg" id="thumbnail_image_1" alt="DeepPoseKit, a software toolkit for fast and robust animal pose estimation using deep learning-thumbnail-1" style="opacity: 1;" >
                       <img src="https://BehaviorZoo.github.io/thumbnails/007/elife-47994-fig2-v2.jpg" id="thumbnail_image_2" alt="DeepPoseKit, a software toolkit for fast and robust animal pose estimation using deep learning-thumbnail-2">
                     </div>
-                    <ul class="thumbnail">
-                      <li><label for="thumbnail_radio_1"><img src="https://BehaviorZoo.github.io/thumbnails/007/elife-47994-fig4-v2.jpg" alt="DeepPoseKit, a software toolkit for fast and robust animal pose estimation using deep learning-thumbnail-1"></label></li>
-                      <li><label for="thumbnail_radio_2"><img src="https://BehaviorZoo.github.io/thumbnails/007/elife-47994-fig2-v2.jpg" alt="DeepPoseKit, a software toolkit for fast and robust animal pose estimation using deep learning-thumbnail-2"></label></li>
-                    </ul>
+                    <div id="sampleImages">
+                      <div class="scrollingHotSpotLeft"></div>
+                      <div class="scrollingHotSpotRight"></div>
+                      <div class="scrollWrapper">
+                        <div class="scrollableArea">
+                          <ul class="thumbnail">
+                            <li><label for="thumbnail_radio_1"><img src="https://BehaviorZoo.github.io/thumbnails/007/elife-47994-fig4-v2.jpg" alt="DeepPoseKit, a software toolkit for fast and robust animal pose estimation using deep learning-thumbnail-1"></label></li>
+                            <li><label for="thumbnail_radio_2"><img src="https://BehaviorZoo.github.io/thumbnails/007/elife-47994-fig2-v2.jpg" alt="DeepPoseKit, a software toolkit for fast and robust animal pose estimation using deep learning-thumbnail-2"></label></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </p>
               </div>
@@ -169,6 +177,8 @@
     <script src="https://BehaviorZoo.github.io/theme/js/bootstrap.min.js"></script>
     <script src="https://BehaviorZoo.github.io/theme/js/jquery.waypoints.min.js"></script>
     <script src="https://BehaviorZoo.github.io/theme/js/jquery.flexslider-min.js"></script>
+    <script src="https://BehaviorZoo.github.io/theme/js/jquery.scrollTo-min.js"></script>
+    <script src="https://BehaviorZoo.github.io/theme/js/jquery.smoothDivScroll-0.6.js"></script>
     <script src="https://BehaviorZoo.github.io/theme/js/BehaviorZoo.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180584889-1"></script>
@@ -180,5 +190,10 @@
       gtag('config', 'UA-180584889-1');
     </script>
     <script src="https://BehaviorZoo.github.io/theme/js/main.js"></script>
+    <script>
+      $(function() {
+	      $("#sampleImages").smoothDivScroll({mouseDownSpeedBooster: 2});
+      });
+    </script>
   </body>
 </html>

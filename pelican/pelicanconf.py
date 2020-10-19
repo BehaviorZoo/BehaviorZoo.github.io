@@ -18,9 +18,9 @@ DATE_FORMATS = {
 PATH = "."
 STATIC_PATHS = ["theme", "thumbnails"]
 EXTRA_PATH_METADATA = {
-    "theme/behaviorzoo.css" : {"path": "theme/css/behaviorzoo.css"},
-    "theme/behaviorzoo.js"  : {"path": "theme/js/behaviorzoo.js"},
-    "theme/images"          : {"path": "theme/images"},
+    "theme/css"    : {"path": "theme/css"},
+    "theme/js"     : {"path": "theme/js"},
+    "theme/images" : {"path": "theme/images"},
 }
 LOGO             = urljoin(base=SITEURL, url="theme/images/logo-round.png")
 APPLE_TOUCH_ICON = urljoin(base=SITEURL, url="theme/images/apple-touch-icon.png")
