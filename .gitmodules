@@ -5,3 +5,6 @@
 	path = pelican/pelican-plugins
 	url = https://github.com/getpelican/pelican-plugins.git
 
+[submodule "colabs/033.ipynb"]
+	path = colabs/033.ipynb
+	url = https://gist.github.com/iwasakishuto/8fa8c29bf4cf4b003010a8a487af12f9

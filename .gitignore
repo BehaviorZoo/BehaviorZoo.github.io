@@ -16,3 +16,6 @@ pelican/content/*
 
 # Pelican
 pelican/*-modified
+
+# Colab Notebooks
+!colabs/*ipynb
