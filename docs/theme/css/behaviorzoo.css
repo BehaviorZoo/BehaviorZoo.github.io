@@ -112,6 +112,10 @@ div#contents div.side {
   }
 }
 
+div#contents div.colab {
+  max-width: 1050px;
+}
+
 /* Thumbnails */
 div#contents div.slide {
   background-color: white;
@@ -120,6 +124,7 @@ div#contents div.slide {
   height: 0;
   overflow: hidden;
   padding-bottom: 100%;
+  border: 5px double rebeccapurple;
 }
 div#contents div.slide img {
   position: absolute;
