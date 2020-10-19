@@ -16,9 +16,9 @@ DATE_FORMATS = {
     "ja": "%Y-%m-%d(%a)",
 }
 ABOUT = {
-  "mail"    : "XXX@example.com",
+  "mail"    : "cabernet.rock@gmail.com",
   "image"   : "https://pbs.twimg.com/profile_images/1254020323428544513/_azsW438_400x400.jpg",
-  "address" : "123 Main Street, New York, NY 10030",
+  "address" : "The University of Tokyo, 7-chōme-3-1 Hongō, Bunkyo City, Tokyo 113-8654, Japan",
   "phone"   : "090-XXXX-XXXX",
 }
 PATH = "."

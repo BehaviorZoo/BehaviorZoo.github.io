@@ -163,7 +163,7 @@
                 </div>
 
               <div class="fh5co-text">
-                  <a href="mailto:XXX@example.com">XXX@example.com</a>
+                  <a href="mailto:cabernet.rock@gmail.com">cabernet.rock@gmail.com</a>
 
 
               </div>
@@ -192,9 +192,17 @@
     <script src="https://BehaviorZoo.github.io/theme/js/behaviorzoo.js"></script>
     <script src="https://BehaviorZoo.github.io/theme/js/tablefilter.js"></script>
     <script>
-    var tf = new TableFilter("database", {
-        base_path: "https://BehaviorZoo.github.io/theme/js/",
-    });
+    var filtersConfig = {
+      base_path: "https://BehaviorZoo.github.io/theme/js/",
+        col_0: 'select',
+        col_1: 'select',
+        col_3: 'select',
+        col_7: 'none',
+        responsive: true,
+        btn_reset: true,
+        status_bar: true,
+    };
+    var tf = new TableFilter("database", filtersConfig);
     tf.init();
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
