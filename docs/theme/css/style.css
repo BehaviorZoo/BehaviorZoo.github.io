@@ -308,8 +308,6 @@ figure figcaption {
   margin: 0 auto;
   padding: 4em 0;
   clear: both;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
 }
 @media screen and (max-width: 768px) {
