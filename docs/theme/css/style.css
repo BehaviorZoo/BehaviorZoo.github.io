@@ -161,24 +161,27 @@ figure figcaption {
   }
 }
 #fh5co-aside .fh5co-main-menu ul li {
+  margin: 0;
   padding: 0 0 20px 0;
   list-style: none;
 }
 #fh5co-aside .fh5co-main-menu ul li.nav-title {
-  color: black;
-  background-color: #fff8cd;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  padding: 0;
+  border: white 2px solid;
 }
 #fh5co-aside .fh5co-main-menu ul li a {
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   letter-spacing: .1em;
   text-transform: capitalize;
-  font-size: 1.7em;
+  font-size: 1.2em;
   line-height: 1px;
   font-weight: 600;
   position: relative;
   padding: 10px 10px;
-  letter-spacing: .2em;
   font-family: "gabriola", "Times New Roman", "Roboto", Arial, sans-serif;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -188,9 +191,9 @@ figure figcaption {
   content: "";
   position: absolute;
   height: 2px;
-  bottom: 7px;
-  left: 10px;
-  right: 10px;
+  bottom: 3px;
+  left: 5px;
+  right: 5px;
   background-color: #228896;
   visibility: hidden;
   -webkit-transform: scaleX(0);
@@ -206,7 +209,7 @@ figure figcaption {
 }
 #fh5co-aside .fh5co-main-menu ul li a:hover {
   text-decoration: none;
-  color: black;
+  color: #ffef8b;
 }
 #fh5co-aside .fh5co-main-menu ul li a:hover:after {
   visibility: visible;
@@ -217,7 +220,7 @@ figure figcaption {
   transform: scaleX(1);
 }
 #fh5co-aside .fh5co-main-menu ul li.fh5co-active a {
-  color: black;
+  color: #ffef8b;
 }
 #fh5co-aside .fh5co-main-menu ul li.fh5co-active a:after {
   visibility: visible;
