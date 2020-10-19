@@ -36,7 +36,7 @@ USE_FOLDER_AS_CATEGORY = True
 DIRECT_TEMPLATES = [
     "index", "tags", "categories", "archives", "search", "404", "contact",
 ]
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 100
 DISQUS_ON_PAGES = False
 # Feed generation
 FEED_DOMAIN        = SITEURL
@@ -61,7 +61,7 @@ MARKDOWN = {
 # Plugins
 from pelican_jupyter import markup as nb_markup
 PLUGIN_PATHS = ["./pelican-plugins-modified"]
-PLUGINS = ["i18n_subsites", nb_markup, "render_math", "tipue_search", "neighbors"]
+PLUGINS = ["i18n_subsites", nb_markup, "render_math", "tipue_search", "neighbors", "pelican-datatable"]
 # i18n_subsites
 JINJA_ENVIRONMENT = {"extensions": ["jinja2.ext.i18n"]}
 # I18N_SUBSITES = {
