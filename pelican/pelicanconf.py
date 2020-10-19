@@ -15,6 +15,12 @@ DATE_FORMATS = {
     "en": "%a, %d %b %Y",
     "ja": "%Y-%m-%d(%a)",
 }
+ABOUT = {
+  "mail"    : "XXX@example.com",
+  "image"   : "https://pbs.twimg.com/profile_images/1254020323428544513/_azsW438_400x400.jpg",
+  "address" : "123 Main Street, New York, NY 10030",
+  "phone"   : "090-XXXX-XXXX",
+}
 PATH = "."
 STATIC_PATHS = ["theme", "thumbnails"]
 EXTRA_PATH_METADATA = {
