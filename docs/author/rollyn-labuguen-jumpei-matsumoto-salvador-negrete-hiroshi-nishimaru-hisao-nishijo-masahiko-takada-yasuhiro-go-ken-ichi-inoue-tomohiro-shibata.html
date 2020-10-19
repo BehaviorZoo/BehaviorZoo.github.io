@@ -58,23 +58,23 @@
             <li class="nav-title"><a href="https://BehaviorZoo.github.io/categories.html"></a>Animals</li>
             <li><a href="https://BehaviorZoo.github.io/category/ant.html">ant</a></li>
             <li><a href="https://BehaviorZoo.github.io/category/bee.html">bee</a></li>
-            <li><a href="https://BehaviorZoo.github.io/category/bird.html">bird</a></li>
             <li><a href="https://BehaviorZoo.github.io/category/caenorhabditis-elegans.html">Caenorhabditis elegans</a></li>
-            <li><a href="https://BehaviorZoo.github.io/category/cheetahs.html">Cheetahs</a></li>
-            <li><a href="https://BehaviorZoo.github.io/category/dog.html">dog</a></li>
             <li><a href="https://BehaviorZoo.github.io/category/drosophila.html">Drosophila</a></li>
             <li><a href="https://BehaviorZoo.github.io/category/grevys-zebra.html">Grévy’s zebra</a></li>
             <li><a href="https://BehaviorZoo.github.io/category/hourse.html">Hourse</a></li>
-            <li><a href="https://BehaviorZoo.github.io/category/human.html">human</a></li>
-            <li><a href="https://BehaviorZoo.github.io/category/larvae.html">larvae</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/larvae-mice.html">larvae, mice</a></li>
             <li><a href="https://BehaviorZoo.github.io/category/locust.html">locust</a></li>
             <li><a href="https://BehaviorZoo.github.io/category/macaque.html">Macaque</a></li>
             <li><a href="https://BehaviorZoo.github.io/category/marmoset.html">marmoset</a></li>
             <li><a href="https://BehaviorZoo.github.io/category/mice.html">mice</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/mice-dog.html">mice, dog</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/mice-drosophila.html">mice,  Drosophila</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/mice-drosophila-cheetahs.html">mice, Drosophila, Cheetahs</a></li>
             <li><a href="https://BehaviorZoo.github.io/category/monkey.html">monkey</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/monkey-dog-mice-human.html">monkey, dog, mice, human</a></li>
             <li><a href="https://BehaviorZoo.github.io/category/mosquito.html">Mosquito</a></li>
             <li><a href="https://BehaviorZoo.github.io/category/others.html">others</a></li>
-            <li><a href="https://BehaviorZoo.github.io/category/pig.html">pig</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/pig-monkey-bird.html">pig, monkey, bird</a></li>
             <li><a href="https://BehaviorZoo.github.io/category/rhesus-monkey.html">rhesus monkey</a></li>
             <li><a href="https://BehaviorZoo.github.io/category/weakly-electric-fish.html">weakly electric fish</a></li>
             <li><a href="https://BehaviorZoo.github.io/category/zebrafish.html">zebrafish</a></li>
@@ -99,7 +99,7 @@
     <div class="fh5co-narrow-content">
       <h1 class="fh5co-heading-colored"><i class="icon-database"></i> All Database</h1>
       <div class="animate-box" data-animate-effect="fadeInLeft">
-        <table class="database">
+        <table id="database" class="database">
           <thead>
             <tr>
               <th style="text-align: center">Quority</th>
@@ -120,7 +120,7 @@
             <td style="text-align: center">field</td>
             <td style="text-align: center">nan</td>
             <td style="text-align: center">deeplabcut</td>
-            <td style="text-align: left"><a href="https://BehaviorZoo.github.io/001_0.html" rel="bookmark" title="Permalink to MacaquePose: A novel ‘in the wild’ macaque monkey pose dataset for markerless motion capture">MacaquePose: A novel ‘in the wild’ macaque monkey pose dataset for markerless motion capture</a></td>
+            <td style="text-align: left"><a href="https://BehaviorZoo.github.io/001.html" rel="bookmark" title="Permalink to MacaquePose: A novel ‘in the wild’ macaque monkey pose dataset for markerless motion capture">MacaquePose: A novel ‘in the wild’ macaque monkey pose dataset for markerless motion capture</a></td>
           </tr></tbody>
         </table>
       </div>
@@ -170,6 +170,13 @@
     <script src="https://BehaviorZoo.github.io/theme/js/jquery.scrollTo-min.js"></script>
     <script src="https://BehaviorZoo.github.io/theme/js/jquery.smoothDivScroll-0.6.js"></script>
     <script src="https://BehaviorZoo.github.io/theme/js/behaviorzoo.js"></script>
+    <script src="https://BehaviorZoo.github.io/theme/js/tablefilter.js"></script>
+    <script>
+    var tf = new TableFilter("database", {
+        base_path: "https://BehaviorZoo.github.io/theme/js/",
+    });
+    tf.init();
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180584889-1"></script>
     <script>
