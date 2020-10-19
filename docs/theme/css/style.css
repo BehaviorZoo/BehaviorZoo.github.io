@@ -308,6 +308,8 @@ figure figcaption {
   margin: 0 auto;
   padding: 4em 0;
   clear: both;
+}
+#fh5co-main>.fh5co-narrow-content {
   min-height: 100vh;
 }
 @media screen and (max-width: 768px) {
