@@ -230,6 +230,15 @@ figure figcaption {
   -o-transform: scaleX(1);
   transform: scaleX(1);
 }
+.fh5co-footer {
+  margin-top: auto;
+  padding-left: 10px;
+  background-color: black;
+  color: white;
+}
+.fh5co-footer p {
+  margin: 0;
+}
 #fh5co-aside .fh5co-footer {
   position: absolute;
   bottom: 40px;
@@ -251,7 +260,6 @@ figure figcaption {
 }
 
 
-
 #fh5co-aside #social [class^="icon-"], [class*=" icon-"] {
   font-size: 2em;
 }
@@ -268,7 +276,7 @@ figure figcaption {
   list-style: none;
 }
 #fh5co-aside #social li a {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.7);
   padding: 4px;
 }
 #fh5co-aside #social li a:hover, #fh5co-aside #social li a:active, #fh5co-aside #social li a:focus {
@@ -300,6 +308,9 @@ figure figcaption {
   margin: 0 auto;
   padding: 4em 0;
   clear: both;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 @media screen and (max-width: 768px) {
   #fh5co-main .fh5co-narrow-content {
@@ -644,6 +655,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .fh5co-heading-colored {
   color: #228896;
   font-size: 30px;
+  font-family: serif;
 }
 
 .fh5co-cards {
