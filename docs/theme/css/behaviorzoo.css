@@ -179,6 +179,10 @@ table.database {
   border: 2px #2b2b2b solid;
   border-collapse: collapse;
   table-layout: auto;
+  display: block;
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
 }
 table.database th {
   vertical-align: middle;

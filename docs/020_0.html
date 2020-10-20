@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <link rel="shortcut icon" href="https://BehaviorZoo.github.io/theme/images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="https://BehaviorZoo.github.io/theme/images/apple-touch-icon.png" type="image/png" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multiview Supervision By Registration</title>
+    <meta name="author" content="Yilun Zhang, Hyun Soo Park" />
+    <meta name="description" content="Plan to fill in the outline and explanation of the data here." />
+    <meta name="keywords" content="the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), body shape/skelton, lab">
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:site_name" content="BehaviorZoo"/>
+    <meta property="og:title" content="Multiview Supervision By Registration"/>
+    <meta property="og:description" content="Plan to fill in the outline and explanation of the data here."/>
+    <meta property="og:url" content="https://BehaviorZoo.github.io/020_0.html"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="2020-03-01 00:00:00+09:00"/>
+    <meta property="article:modified_time" content=""/>
+    <meta property="article:author" content="https://BehaviorZoo.github.io/author/yilun-zhang-hyun-soo-park.html">
+    <meta property="article:section" content="monkey"/>
+    <meta property="article:tag" content="the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)"/>
+    <meta property="article:tag" content="body shape/skelton"/>
+    <meta property="article:tag" content="lab"/>
+    <meta property="og:image" content="https://BehaviorZoo.github.io/https://BehaviorZoo.github.io/thumbnails/020/020_3.png">
+    <!-- Links (CSS) -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://BehaviorZoo.github.io/theme/css/animate.css">
+    <link rel="stylesheet" href="https://BehaviorZoo.github.io/theme/css/icomoon.css">
+    <link rel="stylesheet" href="https://BehaviorZoo.github.io/theme/css/bootstrap.css">
+    <link rel="stylesheet" href="https://BehaviorZoo.github.io/theme/css/flexslider.css">
+    <link rel="stylesheet" href="https://BehaviorZoo.github.io/theme/css/style.css">
+    <link rel="stylesheet" href="https://BehaviorZoo.github.io/theme/css/custom.css">
+    <link rel="stylesheet" href="https://BehaviorZoo.github.io/theme/css/pygments.css">
+    <link rel="stylesheet" href="https://BehaviorZoo.github.io/theme/tipuesearch/css/tipuesearch.css">
+    <link rel="stylesheet" href="https://BehaviorZoo.github.io/theme/css/behaviorzoo.css">
+    <script src="https://BehaviorZoo.github.io/theme/js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="/theme/js/respond.min.js"></script>
+    <![endif]-->
+    <link href="https://BehaviorZoo.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="BehaviorZoo Atom">
+  </head>
+  <body>
+    <div id="fh5co-page">
+      <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+      <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+        <nav class="fh5co-main-menu" role="navigation">
+        </nav>
+        <div class="clearfix"></div>
+        <h1 id="fh5co-logo"><a href="https://BehaviorZoo.github.io/index.html"><img src="https://BehaviorZoo.github.io/theme/images/logo-round.png" /></a></h1>
+        <nav class="fh5co-main-menu" role="navigation">
+          <!-- Tipue Search -->
+          <ul>
+            <li><form id="searchform" action="https://BehaviorZoo.github.io/search.html">
+                <input id="tipue_search_input" data-siteurl="https://BehaviorZoo.github.io" type="text" size="60" class="form-control search-field" name="q">
+                <button type="submit" class="btn btn-primary search-submit"><i class="icon-search4"></i></button>
+            </form></li>
+          </ul>
+
+          <!-- Main navigation (category) -->
+          <ul>
+            <!-- home link -->
+            <!-- <li><a href="https://BehaviorZoo.github.io/">Home</a></li> -->
+            
+            <!-- page links -->
+
+            <!-- categories -->
+            <li class="nav-title"><a href="https://BehaviorZoo.github.io/categories.html"></a>Animals</li>
+            <li><a href="https://BehaviorZoo.github.io/category/ant.html">ant</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/bee.html">bee</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/bird.html">bird</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/caenorhabditis-elegans.html">Caenorhabditis elegans</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/cheetahs.html">Cheetahs</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/dog.html">dog</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/drosophila.html">Drosophila</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/grevys-zebra.html">Grévy’s zebra</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/hourse.html">Hourse</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/human.html">human</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/larvae.html">larvae</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/locust.html">locust</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/macaque.html">Macaque</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/marmoset.html">marmoset</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/mice.html">mice</a></li>
+            <li class="fh5co-active"><a href="https://BehaviorZoo.github.io/category/monkey.html">monkey</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/mosquito.html">Mosquito</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/others.html">others</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/pig.html">pig</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/rhesus-monkey.html">rhesus monkey</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/weakly-electric-fish.html">weakly electric fish</a></li>
+            <li><a href="https://BehaviorZoo.github.io/category/zebrafish.html">zebrafish</a></li>
+          
+            <!-- tags -->
+            <li class="nav-title"><a href="https://BehaviorZoo.github.io/tags.html">Tags</a></li>
+            <!-- <li><a href="https://BehaviorZoo.github.io/tags.html">Tags</a></li> -->
+          
+            <!-- additional menu items from config -->
+        
+          </ul>
+        </nav>
+        <ul id="social">
+          <li><a href="https://twitter.com/cabernet_rock" alt="twitter"><i class="icon-twitter2"></i></a></li>
+          <li><a href="https://github.com/BehaviorZoo" alt="github"><i class="icon-github"></i></a></li>
+        </ul>
+      </aside>
+      <div id="fh5co-main">
+        <div class="fh5co-narrow-content article-content">
+          <h1 class="fh5co-heading-colored">Multiview Supervision By Registration</h1>
+          <div id="contents">
+            <!-- Main Content -->
+            <main>
+              <div><span>Tags: </span>
+                <span><a href="https://BehaviorZoo.github.io/tag/the-ieeecvf-winter-conference-on-applications-of-computer-vision-wacv.html"><i class="icon-tags"></i> the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</a> </span>
+                <span><a href="https://BehaviorZoo.github.io/tag/body-shapeskelton.html"><i class="icon-tags"></i> body shape/skelton</a> </span>
+                <span><a href="https://BehaviorZoo.github.io/tag/lab.html"><i class="icon-tags"></i> lab</a> </span>
+              </div>
+              <ul>
+                <li>Animal: monkey, dog, mice, human</li>
+                <li>Species: others</li>
+                <li>Dataset type: body shape/skelton</li>
+                <li>Database URL: https://openaccess.thecvf.com/content_WACV_2020/papers/Zhang_Multiview_Supervision_By_Registration_WACV_2020_paper.pdf</li>
+                <li>DOI: nan</li>
+              </ul>
+              <h2 class="article-description">Description</h2>
+              <p><p>Plan to fill in the outline and explanation of the data here.</p></p>
+            </main>
+            <!-- Images, Paper link,  -->
+            <div class="side">
+              <div class="animate-box" data-animate-effect="fadeInLeft">
+                <p class="animate-box" data-animate-effect="fadeInLeft">
+                  <script>
+                    var curt_thumbnail_no = "thumbnail_image_1";
+                    function changeThumbnail(){
+                        document.getElementById(curt_thumbnail_no).style.opacity = 0;
+                        var target_thumbnail_no = event.target.id.replace("radio", "image");
+                        document.getElementById(target_thumbnail_no).style.opacity = 1;
+                        curt_thumbnail_no = target_thumbnail_no;
+                    }
+                  </script>
+                  <div class="thumbnails">
+                    <input onclick=changeThumbnail() type="radio" name="thumbnail" id="thumbnail_radio_1" checked>
+                    <input onclick=changeThumbnail() type="radio" name="thumbnail" id="thumbnail_radio_2">
+                    <input onclick=changeThumbnail() type="radio" name="thumbnail" id="thumbnail_radio_3">
+                    <input onclick=changeThumbnail() type="radio" name="thumbnail" id="thumbnail_radio_4">
+                    <input onclick=changeThumbnail() type="radio" name="thumbnail" id="thumbnail_radio_5">
+                    <input onclick=changeThumbnail() type="radio" name="thumbnail" id="thumbnail_radio_6">
+                    <div class="slide">
+                      <img src="https://BehaviorZoo.github.io/thumbnails/020/020_3.png" id="thumbnail_image_1" alt="Multiview Supervision By Registration-thumbnail-1" style="opacity: 1;" >
+                      <img src="https://BehaviorZoo.github.io/thumbnails/020/020_2.png" id="thumbnail_image_2" alt="Multiview Supervision By Registration-thumbnail-2">
+                      <img src="https://BehaviorZoo.github.io/thumbnails/020/020_1.png" id="thumbnail_image_3" alt="Multiview Supervision By Registration-thumbnail-3">
+                      <img src="https://BehaviorZoo.github.io/thumbnails/020/020_5.png" id="thumbnail_image_4" alt="Multiview Supervision By Registration-thumbnail-4">
+                      <img src="https://BehaviorZoo.github.io/thumbnails/020/020_4.png" id="thumbnail_image_5" alt="Multiview Supervision By Registration-thumbnail-5">
+                      <img src="https://BehaviorZoo.github.io/thumbnails/020/020_6.png" id="thumbnail_image_6" alt="Multiview Supervision By Registration-thumbnail-6">
+                    </div>
+                    <ul class="thumbnail">
+                      <li><label for="thumbnail_radio_1"><img src="https://BehaviorZoo.github.io/thumbnails/020/020_3.png" alt="Multiview Supervision By Registration-thumbnail-1"></label></li>
+                      <li><label for="thumbnail_radio_2"><img src="https://BehaviorZoo.github.io/thumbnails/020/020_2.png" alt="Multiview Supervision By Registration-thumbnail-2"></label></li>
+                      <li><label for="thumbnail_radio_3"><img src="https://BehaviorZoo.github.io/thumbnails/020/020_1.png" alt="Multiview Supervision By Registration-thumbnail-3"></label></li>
+                      <li><label for="thumbnail_radio_4"><img src="https://BehaviorZoo.github.io/thumbnails/020/020_5.png" alt="Multiview Supervision By Registration-thumbnail-4"></label></li>
+                      <li><label for="thumbnail_radio_5"><img src="https://BehaviorZoo.github.io/thumbnails/020/020_4.png" alt="Multiview Supervision By Registration-thumbnail-5"></label></li>
+                      <li><label for="thumbnail_radio_6"><img src="https://BehaviorZoo.github.io/thumbnails/020/020_6.png" alt="Multiview Supervision By Registration-thumbnail-6"></label></li>
+                    </ul>
+                  </div>
+                </p>
+              </div>
+            </div>
+          </div>
+            
+          <div class="clearfix"></div>
+
+          <div class="colab">
+            <div class="animate-box" data-animate-effect="fadeInLeft">
+              <p class="animate-box" data-animate-effect="fadeInLeft">
+                <h2 class="article-colab">Example Code</h2>
+                <script src="https://gist.github.com/iwasakishuto/8fa8c29bf4cf4b003010a8a487af12f9.js"></script>
+              </p>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <!-- <div class="pagination">
+            <a class="button previous" href="https://BehaviorZoo.github.io/020_1.html">Multiview Supervision By Registration</a>
+            <a href="https://BehaviorZoo.github.io/019_2.html" class="button next">Integrating XMALab and DeepLabCut for high-throughput XROMM</a>
+          </div> -->
+        </div>
+        <div class="clearfix"></div>
+        <div class="fh5co-footer">
+          <p><small>&copy; 2016 Blend Free HTML5. All Rights Reserved.</span> <span>Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a></span>
+          <br /><span>Pelican Theme by: <a href="https://github.com/claudio-walser/pelican-fh5co-marble" target="_blank">Claudio Walser</a></span></small></p>
+        </div>                
+      </div>
+    </div>
+    <!-- Scripts (javascript) -->
+    <script src="https://BehaviorZoo.github.io/theme/js/jquery.min.js"></script>
+    <script src="https://BehaviorZoo.github.io/theme/js/jquery.easing.1.3.js"></script>
+    <script src="https://BehaviorZoo.github.io/theme/js/bootstrap.min.js"></script>
+    <script src="https://BehaviorZoo.github.io/theme/js/jquery.waypoints.min.js"></script>
+    <script src="https://BehaviorZoo.github.io/theme/js/jquery.flexslider-min.js"></script>
+    <script src="https://BehaviorZoo.github.io/theme/js/jquery.scrollTo-min.js"></script>
+    <script src="https://BehaviorZoo.github.io/theme/js/jquery.smoothDivScroll-0.6.js"></script>
+    <script src="https://BehaviorZoo.github.io/theme/js/behaviorzoo.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180584889-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-180584889-1');
+    </script>
+    <script src="https://BehaviorZoo.github.io/theme/js/main.js"></script>
+    <script>
+      $(function() {
+	      $("#sampleImages").smoothDivScroll({mouseDownSpeedBooster: 2});
+      });
+    </script>
+  </body>
+</html>
