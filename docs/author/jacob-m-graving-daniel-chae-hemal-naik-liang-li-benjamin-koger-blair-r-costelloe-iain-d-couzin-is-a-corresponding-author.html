@@ -203,6 +203,19 @@
         col_7: 'none',
         responsive: true,
         watermark: ['quority', 'animal', 'species', 'dataset type', 'field/lab', 'dimension', 'tracking_method'],
+        col_types: [
+          { type: 'formatted-number', decimal: ',', thousands: '.' },
+          'string',
+          'string',
+          'string',
+          'string',
+          'string',
+          'string',
+          'string',
+        ],
+        extensions:[{
+            name: 'sort'
+        }],
     };
     var tf = new TableFilter("database", filtersConfig);
     tf.init();
